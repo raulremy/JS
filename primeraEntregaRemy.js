@@ -73,12 +73,18 @@ const signos = [Aries, Tauro, Geminis, Cancer, Leo, Virgo, Libra, Escorpio, Sagi
 
 let eleccion = prompt("Ingrese el signo a describir: ")
 
-const buscar = signos.find(signo => signo.nombre.toUpperCase() === eleccion.toUpperCase());
+const nombreSignos = [];
+
+for(s of signos){
+    nombreSignos.push(s.nombre.toUpperCase());
+}
+
+let encuentro = nombreSignos.filter(elemento => elemento.includes(eleccion.toUpperCase()));
+
+const buscar = signos.find(signo => signo.nombre.toUpperCase() === encuentro[0]);
 
 document.write(buscar.nombre, ": ", buscar.descripcion);
-console.log(buscar.nombre)
 
-/*
 let grados = parseInt(prompt("Ingrese los grados, para determinar el signo (Entre 0 y 359): "))
 
 console.log(`**********************************`)
@@ -86,7 +92,7 @@ console.log(`**********************************`)
 for(s of signos){
     s.determinaSigno(grados);
 }
-*/
+
 // Se Recorre el array de signos, lista de 
 console.log(`****** Se Recorre el array de signos, con su lista de propiedades, y cuando es Mutable, se especifica`);
 for(signo of signos){
