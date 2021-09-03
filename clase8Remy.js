@@ -77,6 +77,11 @@ let padre = document.getElementById("signos");
 //Iteramos el array con for...of
 for(signo of signos){
 
+    let li0 = document.createElement("li");
+
+    li0.innerHTML = `<strong>*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*</strong>`;
+    padre.appendChild(li0);
+
     for (const property in signo) {
         console.log(`${property}: ${signo[property]}`);
 
