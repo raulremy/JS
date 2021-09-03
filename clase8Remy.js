@@ -1,3 +1,4 @@
+
 // Se define la clase signo con sus propiedades y metodos
 
 class Signo{
@@ -69,29 +70,102 @@ const Piscis = new Signo("PISCIS", "Femenina", "Mutable", "Agua", "Neptuno", 330
 
 // Se crea un Array de signos
 const signos = [Aries, Tauro, Geminis, Cancer, Leo, Virgo, Libra, Escorpio, Sagitario, Capricornio, Acuario, Piscis];
+// Se define la clase signo con sus propiedades y metodos
 
-// Clase 8
-//Obtenemos el nodo donde vamos a agregar los nuevos elementos
-let padre = document.getElementById("signos");
-//Array con la información a agregar
-//Iteramos el array con for...of
-for(signo of signos){
-
-    let li0 = document.createElement("li");
-
-    li0.innerHTML = `<strong>*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*</strong>`;
-    padre.appendChild(li0);
-
-    for (const property in signo) {
-        console.log(`${property}: ${signo[property]}`);
-
-        let li = document.createElement("li");
-
-        let str = property;
-        let str2 = str.charAt(0).toUpperCase() + str.slice(1);
-
-        li.innerHTML = `<strong>${str2}</strong>: ${signo[property]}`;
-        padre.appendChild(li);
-
-      }
+// Se define la clase Planeta con sus propiedades y metodos
+class Planeta{
+    constructor(nombre, descripcion, rigeA){
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.rigeA = rigeA;
+    }
 }
+
+// ************************************************************************************************************************
+
+// Se instancian 10 objetos: Uno por cada planeta     
+
+const Sol = new Planeta("SOL",
+"El Sol es el espíritu de nuestro ser. Es la esencia que marca el «color» de nuestra individualidad. Es una energía masculina (Yang). La auto-expresión del Ser. El signo en donde se encuentra nuestro Sol, nos describe las cualidades que emanamos naturalmente y que tiñe a la totalidad de nuestro ser. La casa astrológica en donde se encuentra el Sol, nos mostrará el área de vida en en donde nuestro ser brilla; el «centro de operaciones» en el cual gravita el resto de nuestro Ser. Palabras clave: Nuestra identidad, Lo que nos hace sentir vivos,     Autoexpresión creativa, Energía masculina (tanto en hombres como en mujeres), Donde «reinamos»",
+"Leo"
+);
+
+const Luna = new Planeta("LUNA",
+"La Luna es nuestras reacciones emociones. Simboliza la «experiencia» del entorno. Ella traduce estas experiencias a través de las emociones. Nos hace saber si algo es satisfactorio o no. Es la indicadora de lo que nos nutre. El signo en donde se encuentra la Luna, describe nuestro lenguaje emocional, las cualidades que nos nutren y a la vez, lo que nutrimos. La casa astrológica en donde se encuentra la Luna nos muestra el área de vida en donde encontramos confort emocional.",
+"Cáncer"
+);
+
+const Mercurio = new Planeta("MERCURIO",
+"Mercurio es nuestros procesos mentales y verbales. Cómo transmitimos y cómo recibimos la información. La inteligencia. Las imágenes visuales que recibimos del exterior. Las ideas. El signo en donde se encuentra Mercurio describe la forma en que adquirimos ideas, cómo nos comunicamos y la manera en que entendemos lo que observamos. La casa astrológica en donde se encuentra muestra el área de vida en donde nuestra mente se activa, en donde surgen ideas y aquello que nos gusta conversar. Palabras clave: Procesos mentales, Expresión verbal, Percepción visual,     Adaptabilidad mental, Reunión de datos.",
+["Géminis","Virgo"]
+);
+
+const Venus = new Planeta("VENUS",
+"Venus es la parte nuestra que goza. Representa lo que nos gusta, lo que valoramos. La gracia. La autoestima. El encanto personal. Lo que nos da placer. El signo en donde se encuentra Venus la forma en que sentimos placer, lo que nos gusta, lo que valoramos. La casa en donde se encuentra Venus indica en donde encontramos lo que nos da placer. Palabras clave: Lo que nos da placer, Lo que preferimos, Lo que atraemos,     Lo que valoramos, Expresión femenina (tanto en mujeres como hombres)",
+["Tauro","Libra"]
+);
+
+const Marte = new Planeta("MARTE",
+"Marte el la parte nuestra que actúa por impulso.  La voluntad. El deseo de conquista. Lo que nos atrae. El deseo. El signo en donde se encuentra Marte muestra nuestra manera de ir por lo que queremos. La manera en que se expresa nuestra asertividad. La casa astrológica en donde se halla describe el área de vida que nos atrae, lo que despierta nuestro deseo, lo que salimos a buscar. Aquí vemos en donde se despierta nuestra asertividad. Palabras clave: Lo que buscamos, Lo que salimos a conquistar, Lo que nos atrae, Lo que nos impulsa, Expresión masculina (tanto en hombres como en mujeres)",
+"Aries"
+);
+
+const Jupiter = new Planeta("JUPITER",
+"Júpiter es la parte nuestra que sale a explorar en búsqueda de la expansión de la conciencia. Representa la abundancia, el Saber. El signo en donde se encuentra Júpiter muestra las cualidades que poseemos en abundancia, la forma en que salimos a expandir nuestra consciencia, ya sea a nivel espiritual, material, mental o emocional. La casa astrológica en donde se encuentra nos describe el ámbito en donde salimos a la exploración, en donde nos expandimos, y en donde puede haber suerte y/o abundancia. Palabras clave: Lo que se expande, Lo que queremos experimentar, Lo que queremos saber, Lo que forma nuestras creencias, Lo que salimos a explorar con pasión",
+"Sagitario"
+);
+
+const Saturno = new Planeta("SATURNO",
+"Saturno es la parte nuestra que busca el logro. Nos muestra el camino hacia la madurez a través de ensayos y errores. Es el planeta que nos da la conciencia del tiempo y el espacio. El aprendiz y el maestro interior. El signo en donde se encuentra Saturno muestra la forma en que atravesamos los desafíos y las lecciones de vida. La casa astrológica en donde se encuentra describe el área de vida en donde pondremos todo nuestro empeño para lograr una estructura sólida. Palabras clave: Lo que estructura, Lo que nos pone los pies en la tierra, La realidad, La autoridad, La maestría",
+"Capricornio"
+);
+
+const Urano = new Planeta("URANO",
+"Urano es la parte de nuestra consciencia que busca abrir nuevos espacios para crecer. Representa el inconformismo, la individuación social, el futuro. Su energía se manifiesta como una fuerza disruptiva de renovación. Desmantela estructuras caducas. El signo en donde se encuentra Urano muestra la forma en que buscamos innovar la realidad. La casa astrológica en donde se encuentra describe el ámbito en donde buscamos renovarnos.",
+"Acuario"
+);
+
+const Neptuno = new Planeta("NEPTUNO",
+"Neptuno es la parte de nuestra consciencia que busca atravesar los límites del mundo material. Representa nuestro anhelo por volver a ser uno con el Todo, ya sea a través de la espiritualidad, del arte o las drogas. Neptuno disuelve la realidad para trascenderla. El signo en donde se encuentra Neptuno señala la forma en la que experimentamos la disolución de lo individual y la unión con el Todo. La casa astrológica en donde se encuentra muestra el área de vida en donde experimentamos confusión hasta que podemos ver la ilusión de la separación entre lo material y lo inmaterial.",
+"Piscis"
+);
+
+const Pluton = new Planeta("PLUTON",
+"Plutón es la parte de nuestra consciencia que busca la transformación. Simboliza el proceso de metamorfosis, el cambio de un estado al otro. Actúa como depurador del Ser, trayendo a la superficie los hábitos y actitudes que necesitan actualizarse. El signo en donde se encuentra Plutón muestra la forma en que buscamos transformarnos. La casa astrológica en donde se encuentra muestra el ámbito en donde se produce esta transformación."
+);
+
+// Se crea un Array de Planetas
+const planetas = [Sol, Luna, Mercurio, Venus, Marte, Jupiter, Saturno, Urano, Neptuno, Pluton];
+
+
+// Arreglo de Objetos
+function desplegar(arreglo){
+    //Obtenemos el nodo donde vamos a agregar los nuevos elementos
+    let padre = document.getElementById("id");
+    //Array con la información a agregar
+    //Iteramos el array con for...of
+    for(objeto of arreglo){
+
+        let li0 = document.createElement("li");
+
+        li0.innerHTML = `<strong>*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*</strong>`;
+        padre.appendChild(li0);
+
+        for (const property in objeto) {
+            console.log(`${property}: ${objeto[property]}`);
+
+            let li = document.createElement("li");
+
+            let str = property;
+            let str2 = str.charAt(0).toUpperCase() + str.slice(1);
+
+            li.innerHTML = `<strong>${str2}</strong>: ${objeto[property]}`;
+            padre.appendChild(li);
+
+        }
+    }
+}
+
+desplegar(signos);
+
+desplegar(planetas);
