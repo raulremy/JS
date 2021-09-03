@@ -131,7 +131,8 @@ const Neptuno = new Planeta("NEPTUNO",
 );
 
 const Pluton = new Planeta("PLUTON",
-"Plutón es la parte de nuestra consciencia que busca la transformación. Simboliza el proceso de metamorfosis, el cambio de un estado al otro. Actúa como depurador del Ser, trayendo a la superficie los hábitos y actitudes que necesitan actualizarse. El signo en donde se encuentra Plutón muestra la forma en que buscamos transformarnos. La casa astrológica en donde se encuentra muestra el ámbito en donde se produce esta transformación."
+"Plutón es la parte de nuestra consciencia que busca la transformación. Simboliza el proceso de metamorfosis, el cambio de un estado al otro. Actúa como depurador del Ser, trayendo a la superficie los hábitos y actitudes que necesitan actualizarse. El signo en donde se encuentra Plutón muestra la forma en que buscamos transformarnos. La casa astrológica en donde se encuentra muestra el ámbito en donde se produce esta transformación.",
+"Escorpio"
 );
 
 // Se crea un Array de Planetas
