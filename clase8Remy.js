@@ -158,6 +158,17 @@ function desplegar(arreglo){
             let li = document.createElement("li");
 
             let str = property;
+
+            if(str === "rigeA"){
+                str = "Rige a";   
+            }
+            else if(str === "descripcion"){
+                str = "Descripción";   
+            }
+            else if(str === "cuspide"){
+                str = "Cúspide";   
+            }
+
             let str2 = str.charAt(0).toUpperCase() + str.slice(1);
 
             li.innerHTML = `<strong>${str2}</strong>: ${objeto[property]}`;
