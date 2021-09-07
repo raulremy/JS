@@ -20,8 +20,6 @@ class Signo{
     determinaSigno(grados){
         if(grados >= this.cuspide && grados < this.cuspide+30){
 
-//            document.write(this.nombre, ": ", this.descripcion);
-
             console.log(`Pertenece al signo de %s y estas son sus características: %s`, this.nombre, this.descripcion)    
         }
     }
@@ -138,9 +136,10 @@ const Pluton = new Planeta("Plutón",
 // Se crea un Array de Planetas
 const planetas = [Sol, Luna, Mercurio, Venus, Marte, Jupiter, Saturno, Urano, Neptuno, Pluton];
 
-function desplegar(objeto){
+
+function desplegar(objeto, formulario){
     //Obtenemos el nodo donde vamos a agregar los nuevos elementos
-    let padre = document.getElementById("formulario");
+    let padre = document.getElementById(formulario);
     let li0 = document.createElement("li");
 
     li0.innerHTML = `<br>`
@@ -150,7 +149,7 @@ function desplegar(objeto){
     for (const property in objeto) {
         console.log(`${property}: ${objeto[property]}`);
 
-        let li = document.createElement("formulario");
+        let li = document.createElement(formulario);
 
         let str = property;
 
@@ -167,16 +166,17 @@ function desplegar(objeto){
         let str2 = str.charAt(0).toUpperCase() + str.slice(1);
 
         li.innerHTML = `<strong>${str2}</strong>: ${objeto[property]}<br>`;
+
         padre.appendChild(li);
     }
 }
 
-// Arreglo de Objetos
+// Evento: Buscar Signo
 function buscarSigno(e){
+    
     e.preventDefault();
-    //Obtenemos el elemento desde el cual se disparó el evento
+    
     let formulario = e.target
-    //Obtengo el valor del primero hijo <input type="text">
 
     const nombreSignos = [];
 
@@ -185,14 +185,37 @@ function buscarSigno(e){
     }
 
     let encuentro = nombreSignos.filter(elemento => elemento.includes(formulario.children[0].value.toUpperCase()));
+
     const signoElegido = signos.find(signo => signo.nombre.toUpperCase() === encuentro[0]);
-console.log("signo elegido: ", signoElegido)
-    desplegar(signoElegido);
+
+    desplegar(signoElegido, "formSigno");
 }
 
+let miFormSigno = document.getElementById("formSigno");
 
-//console.log("aqui")
-let miFormulario = document.getElementById("formulario");
+miFormSigno.addEventListener("submit", buscarSigno);
 
-miFormulario.addEventListener("submit", buscarSigno);
 
+// Evento: Buscar Planeta
+function buscarPlaneta(e){
+    
+    e.preventDefault();
+    
+    let formulario = e.target
+
+    const nombrePlanetas = [];
+
+    for(s of planetas){
+        nombrePlanetas.push(s.nombre.toUpperCase());
+    }
+
+    let encuentro = nombrePlanetas.filter(elemento => elemento.includes(formulario.children[0].value.toUpperCase()));
+
+    const planetaElegido = planetas.find(planeta => planeta.nombre.toUpperCase() === encuentro[0]);
+
+    desplegar(planetaElegido, "formPlaneta");
+}
+
+let miFormPlaneta = document.getElementById("formPlaneta");
+
+miFormPlaneta.addEventListener("submit", buscarPlaneta);
