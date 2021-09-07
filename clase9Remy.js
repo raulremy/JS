@@ -143,7 +143,8 @@ function desplegar(objeto){
     let padre = document.getElementById("formulario");
     let li0 = document.createElement("li");
 
-    li0.innerHTML = `<strong>--------------------------------------------------------------------------------------------------------</trong>`;
+    li0.innerHTML = `<br>`
+
     padre.appendChild(li0);
 
     for (const property in objeto) {
