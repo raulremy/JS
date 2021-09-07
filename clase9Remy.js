@@ -34,10 +34,10 @@ const Aries = new Signo("Aries", "Masculina", "Cardinal", "Fuego", "Marte", "0",
 const Tauro = new Signo("Tauro", "Femenina", "Fijo", "Tierra", "Venus", "30",
 "Es un ser decidido, pragmático y tiene una enorme fuerza de voluntad. Tiende a las ideas conservadoras, y como le gusta tanto la estabilidad, sus ideas son fijas no hay manera de convencer a un Tauro de algo que vaya en contra de sus principios o de lo que piensa y siente, así que la terquedad es otra de sus características más evidente. Tienen una gran capacidad para evitar conflictos y disgustos, sin duda prefieren resolver sus problemas con pragmatismo; también tienen buen humor. Sin embargo, cuando pierden los nervios, son capaces de montar en cólera y mostrar un genio terrible. Los Tauro son personas sensuales que idolatran la belleza, la fidelidad y el cuidado; no obstante, el punto negativo es que tienden a la posesión. Su carácter romántico hace que disfrute sintiendo el amor de su pareja el sexo para Tauro es en última instancia la manifestación de la entrega que siente por la persona que ama."
 );
-const Geminis = new Signo("Géminis", "Masculina", "Mutable", "Aire", "Mercurio", "60",
+const Geminis = new Signo("Geminis", "Masculina", "Mutable", "Aire", "Mercurio", "60",
 "Los Géminis son personas inquietas que empiezan nuevos proyectos y retos con mucho entusiasmo, aunque con demasiada frecuencia les falta la constancia necesaria para realizarlos. Tienden a pensar en la vida como un juego y buscan la diversión y aventura en todo lo que hacen; tienen el egoísmo y la imaginación propia de la infancia. También tienen fuerza y vitalidad, además son seres inteligentes, con facultad de expresarse de modo eficaz para deleitar, conmover o persuadir (según convenga) a quienes prestan oídos a sus palabras. Asimismo, son cariñosos y disfrutan como nadie con lo extraordinario y la novedad: cuanta más variedad en su vida, mejor que mejor.En el plano sentimental se mueven como pez en el agua y vuelven a demostrar su doble naturaleza: por un lado se entregan sexualmente, pero por otro rechazan el romanticismo y pierden interés con facilidad una vez conquistada su pareja."
 );
-const Cancer = new Signo("Cáncer", "Femenina", "Cardinal", "Agua", "Luna", "90",
+const Cancer = new Signo("Cancer", "Femenina", "Cardinal", "Agua", "Luna", "90",
 "Los Cáncer tienen una memoria extraordinaria y además poseen un talento innato para las artes y las letras notable. Además son ambiciosos y pueden cambiar sin dificultad de profesión, de amistades, etc. El Cangrejo vive su vida dando dos pasos hacia delante y uno hacia atrás; es curioso pero temeroso, es bravo pero sensible, es voluble pero conservador, ¡vamos!¡el mejor exponente del espíritu de la contradicción pura.Cuando se trata de amor, en sus relaciones Cáncer es también una mezcla de contradicción; si mantiene una relación estable, ama de verdad, sinceramente, aunque en su yo interno eso no significa que no pueda mantener relaciones sexuales con otras personas. Además, se caracteriza por una ternura, emoción e imaginación que le convierten en un amante muy, muy especial."
 );
 const Leo = new Signo("Leo", "Masculina", "Fijo", "Fuego", "Sol", "120",
@@ -108,7 +108,7 @@ const Marte = new Planeta("Marte",
 "Aries"
 );
 
-const Jupiter = new Planeta("Júpiter",
+const Jupiter = new Planeta("Jupiter",
 "Júpiter es la parte nuestra que sale a explorar en búsqueda de la expansión de la conciencia. Representa la abundancia, el Saber. El signo en donde se encuentra Júpiter muestra las cualidades que poseemos en abundancia, la forma en que salimos a expandir nuestra consciencia, ya sea a nivel espiritual, material, mental o emocional. La casa astrológica en donde se encuentra nos describe el ámbito en donde salimos a la exploración, en donde nos expandimos, y en donde puede haber suerte y/o abundancia. Palabras clave: Lo que se expande, Lo que queremos experimentar, Lo que queremos saber, Lo que forma nuestras creencias, Lo que salimos a explorar con pasión",
 "Sagitario"
 );
@@ -128,7 +128,7 @@ const Neptuno = new Planeta("Neptuno",
 "Piscis"
 );
 
-const Pluton = new Planeta("Plutón",
+const Pluton = new Planeta("Pluton",
 "Plutón es la parte de nuestra consciencia que busca la transformación. Simboliza el proceso de metamorfosis, el cambio de un estado al otro. Actúa como depurador del Ser, trayendo a la superficie los hábitos y actitudes que necesitan actualizarse. El signo en donde se encuentra Plutón muestra la forma en que buscamos transformarnos. La casa astrológica en donde se encuentra muestra el ámbito en donde se produce esta transformación.",
 "Escorpio"
 );
@@ -142,7 +142,7 @@ function desplegar(objeto, formulario){
     let padre = document.getElementById(formulario);
     let li0 = document.createElement("li");
 
-    li0.innerHTML = `<br>`
+//    li0.innerHTML = `<br>`
 
     padre.appendChild(li0);
 
