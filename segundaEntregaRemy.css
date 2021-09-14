@@ -1,0 +1,13 @@
+body{
+    color:aquamarine;
+    text-align: center;
+    background-image: url("./images/fondo.jpg");
+    background-size: cover;
+    font-size: .5cm;
+    float:inline-start;
+}
+.elemento img {
+    position:relative;
+    top: 0px;
+    right: 0px;
+}
