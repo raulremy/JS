@@ -10,7 +10,6 @@ btnEnviar.addEventListener("click", formEnviar);
 
 /* ***************** FUNCIONES ************************ */
 
-
 // Ver datos de formularios
 function formEnviar(e){
     e.preventDefault();
@@ -23,7 +22,4 @@ function formEnviar(e){
     else if(!inpCorreo.value.includes("@" && ".com")){
         alert("Los datos no son validos. Por favor, vuelva a cargar el formulario.")
     }
-
-
-
 }
