@@ -234,64 +234,14 @@ function desplegar(objeto, formulario){
 }
 
 
-// Evento: Buscar Signo
-function buscarSigno(e){
-    
-    e.preventDefault();
-    
-    let formulario = e.target
-
-    const nombreSignos = [];
-
-    for(s of signos){
-        nombreSignos.push(s.nombre.toUpperCase());
-    }
-
-    let encuentro = nombreSignos.filter(elemento => elemento.includes(formulario.children[0].value.toUpperCase()));
-
-    if(encuentro[0] == undefined || formulario.children[0].value == ""){
-        alert("Signo no encontrado. Reintente con otras letras.");
-    }
-    else{
-        const signoElegido = signos.find(signo => signo.nombre.toUpperCase() === encuentro[0]);
-     
-        desplegar(signoElegido, "formSigno");
-    }        
-}
-
-// Evento: Buscar Planeta
-function buscarPlaneta(e){
-
-    e.preventDefault();
-
-    let formulario = e.target
-
-    const nombrePlanetas = [];
-
-    for(s of planetas){
-        nombrePlanetas.push(s.nombre.toUpperCase());
-    }
-
-    let encuentro = nombrePlanetas.filter(elemento => elemento.includes(formulario.children[0].value.toUpperCase()));
-
-    if(encuentro[0] === undefined || formulario.children[0].value == ""){
-        alert("Planeta no encontrado. Reintente con otras letras.");
-    }
-    else{
-        const planetaElegido = planetas.find(planeta => planeta.nombre.toUpperCase() === encuentro[0]);
-
-        desplegar(planetaElegido, "formPlaneta");
-    }    
-}
-
-// Cambio botones por jQuery
+// ************************ Cambio botones por jQuery ***********************
 
 /*
 let formSigno = document.getElementById("formSigno");
 
 formSigno.addEventListener("submit", buscarSigno);
-
-
+*/
+/*
 let formPlaneta = document.getElementById("formPlaneta");
 
 formPlaneta.addEventListener("submit", buscarPlaneta);
@@ -305,3 +255,49 @@ $(document).ready(function() {
 $(document).ready(function() {
     $('#formPlaneta').click(buscarPlaneta);
   });
+
+// Evento: Buscar Signo
+function buscarSigno(e){
+    
+    e.preventDefault();
+    
+    let formulario = e.target
+    let signoBuscado = document.getElementById("buscadorSigno")
+    const nombreSignos = [];    
+    for(s of signos){
+        nombreSignos.push(s.nombre.toUpperCase());
+    }    
+    let encuentro = nombreSignos.filter(elemento => elemento.includes(signoBuscado.value.toUpperCase()));    
+
+    if(encuentro == undefined || formulario.children[0]== ""){
+        alert("Signo no encontrado. Reintente con otras letras.");
+    }
+    else{
+        const signoElegido = signos.find(signo => signo.nombre.toUpperCase() == encuentro);
+     
+        desplegar(signoElegido, "formSigno");
+    }        
+}
+
+// Evento: Buscar Planeta
+function buscarPlaneta(e){
+    
+    e.preventDefault();
+    
+    let formulario = e.target
+    let planetaBuscado = document.getElementById("buscadorPlaneta")
+    const nombrePlanetas = [];    
+    for(s of planetas){
+        nombrePlanetas.push(s.nombre.toUpperCase());
+    }    
+    let encuentro = nombrePlanetas.filter(elemento => elemento.includes(planetaBuscado.value.toUpperCase()));    
+
+    if(encuentro == undefined || formulario.children[0]== ""){
+        alert("Planeta no encontrado. Reintente con otras letras.");
+    }
+    else{
+        const planetaElegido = planetas.find(planeta => planeta.nombre.toUpperCase() == encuentro);
+     
+        desplegar(planetaElegido, "formPlaneta");
+    }        
+}
