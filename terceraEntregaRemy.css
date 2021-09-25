@@ -1,0 +1,16 @@
+body{
+    color:aquamarine;
+    text-align: center;
+    background-image: url("./images/cieloNocturno.jpg");
+    background-size: cover;
+    font-size: .5cm;
+}
+/*
+#divSignos{
+    color: rgb(194, 67, 194);
+}
+
+#divPlanetas{
+    color:rgb(194, 67, 194);
+}
+*/
