@@ -1,0 +1,7 @@
+body{
+    color:aquamarine;
+    text-align: center;
+    background-image: url("./images/cieloNocturno.jpg");
+    background-size: cover;
+    font-size: .5cm;
+}
