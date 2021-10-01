@@ -194,7 +194,7 @@ function desplegar(objeto, formulario){
         document.write
         let li = document.createElement(formulario);
         let str = property;
-        let str1 = objeto[property];
+
         if(property === "imagen"){
             li.innerHTML = `<img src="${objeto[property]}" style="width="200px"; height="200px";"><br>`;
         } 
@@ -237,7 +237,7 @@ function buscarSigno(e){
         const signoElegido = signos.find(signo => signo.nombre.toUpperCase() === encuentro[0]);
      
         desplegar(signoElegido, "formSigno");
-    }        
+    }       
 }
 
 let formSigno = document.getElementById("formSigno");
